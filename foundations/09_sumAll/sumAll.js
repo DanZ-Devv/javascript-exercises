@@ -1,5 +1,19 @@
-const sumAll = function() {
-
+const sumAll = function(n1, n2) {
+    if (Number.isInteger(n1) && Number.isInteger(n2)) {
+        if (n1 > n2) {
+            let temp = n2;
+            n2 = n1;
+            n1 = temp;
+        }
+        if (n1 >= 0 && n2 >= 0) {
+            let sum = 0;
+            for (let i = n1; i <= n2; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+    }
+    return "ERROR";
 };
 
 // Do not edit below this line
